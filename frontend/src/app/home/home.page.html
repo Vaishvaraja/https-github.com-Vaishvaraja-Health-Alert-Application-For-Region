@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="userDetailsForm" (ngSubmit)="addUserDetailes(userDetailsForm)">
+    <ion-item>
+      <ion-label position="floating">User Name</ion-label>
+      <ion-input type="text" placeholder="Eg : username" formControlName="name" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input maxlength=10 type="tel" placeholder="Eg : 9999999999" formControlName="phone" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Address</ion-label>
+      <ion-input type="text" placeholder="Eg : No. 10, Ram Street" formControlName="address" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">City</ion-label>
+      <ion-input type="text" placeholder="Eg : Coimbatore" formControlName="city" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">State</ion-label>
+      <ion-input type="text" placeholder="Eg : Tamil Nadu" formControlName="state" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Pincode</ion-label>
+      <ion-input type="number" placeholder="Eg : 641007" formControlName="pin" ></ion-input>
+    </ion-item>
+    <ion-button routerLink="/diseases" expand="block"  routerDirection="forward" class="button" fill="outline" color="success" [disabled]="!userDetailsForm.valid" type="submit">Next</ion-button>
+  </form>
+</ion-content> 

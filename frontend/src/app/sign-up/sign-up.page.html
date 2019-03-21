@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>SignUp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #signupForm="ngForm" (ngSubmit)="signUp(signupForm)">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" placeholder="Eg : test@test.com" name="userEmail" ngModel required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" name="password" ngModel required></ion-input>
+    </ion-item>
+    <ion-button type="submit" [disabled]="!signupForm.valid">Sign Up</ion-button>
+  </form>
+</ion-content>

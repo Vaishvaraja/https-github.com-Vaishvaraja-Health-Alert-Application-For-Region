@@ -1,0 +1,96 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons slot="start" defaultHref="/diseases">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Symptoms</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form *ngIf="malaria" [formGroup]="malariaForm" (ngSubmit)="calculateMalariaDisease(malariaForm)">
+
+  <ion-item>
+    <ion-label>High Fever</ion-label>
+    <ion-select formControlName="fever" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Vomitting</ion-label>
+    <ion-select formControlName="vomit" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nausea</ion-label>
+    <ion-select formControlName="nausea" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Head Ache</ion-label>
+    <ion-select formControlName="headAche" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Body Pain And Weekness</ion-label>
+    <ion-select formControlName="bodyPain" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="block" class="button" fill="outline" color="success" [disabled]="!malariaForm.valid" type="submit">Submit</ion-button>
+
+</form>
+
+<form *ngIf="dengue" [formGroup]="dengueForm" (ngSubmit)="calculateDengueDisease(dengueForm)">
+
+  <ion-item>
+    <ion-label>Sudden Onset Fever</ion-label>
+    <ion-select formControlName="suddenOnsetFever" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Painfull Head Ache</ion-label>
+    <ion-select formControlName="painfullHeadAche" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Vommiting</ion-label>
+    <ion-select formControlName="vomit" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nausea</ion-label>
+    <ion-select formControlName="nausea" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Skin Rash</ion-label>
+    <ion-select formControlName="skinRash" cancelText="Cancel" okText="Okay!">
+      <ion-select-option value=1>Yes</ion-select-option>
+      <ion-select-option value=0>No</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="block" class="button" fill="outline" color="success" [disabled]="!dengueForm.valid" type="submit">Submit</ion-button>
+  </form>
+
+
+</ion-content>
