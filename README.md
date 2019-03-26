@@ -3,7 +3,9 @@ TITLE: HEALTH ALERT APPLICATION FOR REGION
 
 TEAM MEMBERS:
 Vaishnavi Y[711715104067]
+
 Porselvi S[711715104704]
+
 Praveenkumar PS[711715104307]
 
 ABSTRACT:
@@ -12,8 +14,10 @@ Health alert application is an android and Ios based application. This app is de
 MODULE SPLIT UP:
 Module 1:
      Gathering information and Designing [Vaishnavi Y]
+     
 Module 2:
       Responsible design and Programming [Porselvi S]
+      
 Module 3:
         Database Connectivity          [Praveen kumar PS]
 Module 4:
